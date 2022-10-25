@@ -1,6 +1,15 @@
-function hasTargetSum(array, target) {
-  // Write your algorithm here
+const hasTargetSum = (arr, target) =>  {
+  
+  for (let i = 0; i < arr.length; i++) {
+    for(let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === target) {
+        return true
+      }
+    }
+  }
+  return false
 }
+
 
 /* 
   Write the Big O time complexity of your function here
